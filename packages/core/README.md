@@ -1,0 +1,1 @@
+# @spritepluginjs/svg-core

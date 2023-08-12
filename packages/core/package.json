@@ -1,0 +1,80 @@
+{
+  "name": "@spritepluginjs/svg-core",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@8.6.0",
+  "description": "core for svg sprite plugin",
+  "license": "MIT",
+  "homepage": "https://github.com/spritepluginjs/svg-sprite-plugins/packages/core#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spritepluginjs/svg-sprite-plugins.git"
+  },
+  "bugs": {
+    "url": "https://github.com/spritepluginjs/svg-sprite-plugins/issues"
+  },
+  "keywords": [
+    "svg-sprite",
+    "sprite",
+    "svgo",
+    "svg"
+  ],
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./*"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch src",
+    "lint": "eslint --cache --ext .js,.jsx,.ts,.tsx .",
+    "start": "esno src/index.ts",
+    "test": "vitest",
+    "lint-staged": "lint-staged",
+    "lint-staged:lint": "eslint",
+    "lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx,.vue .",
+    "prettier": "prettier --check --write --no-plugin-search \"**/*.(js|jsx|tsx|ts|css|less|scss|sass|md|yaml|vue)\""
+  },
+  "dependencies": {
+    "consola": "^3.2.3",
+    "fs-extra": "^11.1.1",
+    "globby": "^13.2.2",
+    "lodash": "^4.17.21",
+    "minimatch": "^9.0.3",
+    "pathe": "^1.1.1",
+    "svg-sprite": "^2.0.2",
+    "type-fest": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
+    "@types/lodash": "^4.14.195",
+    "@types/node": "^18.16.16",
+    "@types/svg-sprite": "^0.0.34",
+    "@vitejs/plugin-react": "^4.0.3",
+    "chalk": "^5.2.0",
+    "esno": "^0.16.3",
+    "fast-glob": "^3.2.12",
+    "rimraf": "^5.0.1",
+    "tsup": "^6.7.0",
+    "typescript": "^5.1.3"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,vue}": "npm run lint-staged:lint",
+    "**/*.{js,jsx,tsx,ts,css,less,scss,sass,md,yaml}": [
+      "prettier --write --no-plugin-search"
+    ]
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  }
+}

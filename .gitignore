@@ -24,5 +24,6 @@ dist-docs
 *.sln
 *.sw?
 
-# custom
+# Custom
 coverage
+**/svg-sprite
