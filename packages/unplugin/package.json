@@ -79,7 +79,6 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch src",
-    "build:fix": "esno scripts/postbuild.ts",
     "lint": "eslint --cache --ext .js,.jsx,.ts,.tsx .",
     "start": "esno src/index.ts",
     "test": "vitest",

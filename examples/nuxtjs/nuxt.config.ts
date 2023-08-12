@@ -11,27 +11,22 @@ export default defineNuxtConfig({
       '../../packages/unplugin/src/nuxt.ts',
       {
         content: ['assets/**/*.svg'],
-        sprites: {
-          symbol: {
-            runtime: {
-              itemGenerator: path.join(
-                __dirname,
-                'scripts',
-                'sprites',
-                'symbol',
-                'item-generator.mjs',
-              ),
-              spriteGenerator: path.join(
-                __dirname,
-                'scripts',
-                'sprites',
-                'symbol',
-                'sprite-generator.mjs',
-              ),
-            },
-          },
-          stack: {
-            example: true,
+        symbol: {
+          runtime: {
+            itemGenerator: path.join(
+              __dirname,
+              'scripts',
+              'sprites',
+              'symbol',
+              'item-generator.mjs',
+            ),
+            spriteGenerator: path.join(
+              __dirname,
+              'scripts',
+              'sprites',
+              'symbol',
+              'sprite-generator.mjs',
+            ),
           },
         },
       },

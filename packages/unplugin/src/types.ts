@@ -1,3 +1,8 @@
-import type { SvgSpriteCoreOptions } from '@spritepluginjs/svg-core'
+import type {
+  SvgSpriteCoreOptions,
+  SymbolSpriteOptions,
+} from '@spritepluginjs/svg-core'
 
-export interface Options extends SvgSpriteCoreOptions {}
+export interface Options extends Omit<SvgSpriteCoreOptions, 'sprites'> {
+  symbol: SymbolSpriteOptions
+}

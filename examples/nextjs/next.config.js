@@ -9,27 +9,22 @@ const nextConfig = {
       require('../../packages/unplugin/dist/webpack.cjs').default({
         debug: true,
         content: ['src/assets/**/*.svg'],
-        sprites: {
-          symbol: {
-            runtime: {
-              itemGenerator: path.join(
-                __dirname,
-                'scripts',
-                'sprites',
-                'symbol',
-                'item-generator.mjs',
-              ),
-              spriteGenerator: path.join(
-                __dirname,
-                'scripts',
-                'sprites',
-                'symbol',
-                'sprite-generator.mjs',
-              ),
-            },
-          },
-          stack: {
-            example: true,
+        symbol: {
+          runtime: {
+            itemGenerator: path.join(
+              __dirname,
+              'scripts',
+              'sprites',
+              'symbol',
+              'item-generator.mjs',
+            ),
+            spriteGenerator: path.join(
+              __dirname,
+              'scripts',
+              'sprites',
+              'symbol',
+              'sprite-generator.mjs',
+            ),
           },
         },
       }),

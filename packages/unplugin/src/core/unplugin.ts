@@ -13,7 +13,13 @@ let initialized = false
 let isWatched = false
 
 export default createUnplugin<Options>((options) => {
-  const ctx = getCore(options)
+  const { symbol, ...restOptions } = options
+  const ctx = getCore({
+    ...restOptions,
+    sprites: {
+      symbol,
+    },
+  })
 
   return {
     name: PLUGIN_NAME,
