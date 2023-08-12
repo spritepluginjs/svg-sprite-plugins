@@ -1,4 +1,4 @@
-export const PLUGIN_NAME = 'unplugin-svg-sprite'
+export const PLUGIN_NAME = '@spritepluginjs/svg-unplugin'
 
 export const SVG_SPRITE_PREFIX = `~svg-sprite/`
 

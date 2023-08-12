@@ -1,7 +1,5 @@
-import dedent from 'dedent'
-
 export default function generator({ item, cwd }) {
-  return dedent`
+  return `
     import SvgSpriteItem from '${cwd}/components/SvgSpriteSymbol/Item'
 
     export default {

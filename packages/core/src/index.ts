@@ -6,6 +6,8 @@ export type {
   SvgSpriteSymbolData,
   SvgSpriteCompiledResult,
   TransformData,
+  SvgSpriteSymbolItemProps,
+  SvgSpriteSymbolItem,
 } from './types'
 
 export { SpriteMode } from './constants'

@@ -148,3 +148,12 @@ export interface SvgSpriteCompiledResult {
   static: { result: { [mode: string]: { sprite: BufferFile } }; data: any }
   dynamic: { result: { [mode: string]: { sprite: BufferFile } }; data: any }
 }
+
+export interface SvgSpriteSymbolItem
+  extends Pick<SvgSpriteSymbolShape, 'width' | 'height'> {
+  href: string
+}
+
+export interface SvgSpriteSymbolItemProps {
+  item: SvgSpriteSymbolItem
+}

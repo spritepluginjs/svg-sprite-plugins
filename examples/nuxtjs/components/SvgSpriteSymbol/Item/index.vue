@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import type { SvgSpriteSymbolItemProps } from '../../../../../packages/unplugin/src/types'
+import type { SvgSpriteSymbolItemProps } from '../../../../../packages/core/src/types'
 
 const props = defineProps<SvgSpriteSymbolItemProps>()
 

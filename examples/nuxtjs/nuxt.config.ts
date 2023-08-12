@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   },
   modules: [
     [
-      '../../packages/unplugin/src/nuxt.ts',
+      '../../packages/unplugin/src/nuxt',
       {
         content: ['assets/**/*.svg'],
         symbol: {

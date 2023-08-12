@@ -4,9 +4,11 @@ import type { Options } from './types'
 
 export default function (options: Options, nuxt: any) {
   // install webpack plugin
-  nuxt.hook('webpack:config', async (config: any) => {
-    config.plugins = config.plugins || []
-    config.plugins.unshift(unplugin.webpack(options))
+  nuxt.hook('webpack:config', async (configs: any[]) => {
+    configs.forEach((config) => {
+      config.plugins = config.plugins || []
+      config.plugins.unshift(unplugin.webpack(options))
+    })
   })
 
   // install vite plugin
